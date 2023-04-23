@@ -1,7 +1,9 @@
 <div class="container" *ngIf="isLoaded">
   <div class="row">
-    <div class="col-3" *ngFor="let album of topAlbums">
-      <app-album-card [album]="album"></app-album-card>
+    <div class="flex-column mb-3 album-wrapper">
+      <div style="margin: auto;" *ngFor="let album of topAlbums">
+        <app-album-card [album]="album"></app-album-card>
+      </div>
     </div>
   </div>
 </div>
