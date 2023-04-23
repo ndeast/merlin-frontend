@@ -1,1 +1,8 @@
-<p>album-card works!</p>
+<div class="card" style="width: 13rem;">
+  <img class="card-img-top" src={{album.image}} alt="Card image cap">
+  <div class="card-body">
+    <h4 class="card-title album-name">{{ album.name }}</h4>
+    <h5 class="card-title album-artist">{{ album.artist }}</h5>
+    <p class="card-text playcount">{{ album.playcount }} plays</p>
+  </div>
+</div>

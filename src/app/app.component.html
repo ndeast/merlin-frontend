@@ -1,1 +1,3 @@
-<a>this works</a>
+<div *ngIf="isLoaded">
+  <app-album-card *ngFor="let album of topAlbums" [album]="album"></app-album-card>
+</div>
