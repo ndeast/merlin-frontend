@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { MerlinService } from './merlin.service';
+import { MerlinService } from './services/merlin.service';
 import { lastValueFrom } from 'rxjs';
 
 @Component({
@@ -14,7 +14,7 @@ export class AppComponent {
 
   async ngOnInit() {
     console.log("test")
-    let test = await lastValueFrom(this.merlin.getAlbumChart())
+    let test = await lastValueFrom(this.merlin.getTopAlbums('ndeast'))
     console.log(test)
   }
 }
