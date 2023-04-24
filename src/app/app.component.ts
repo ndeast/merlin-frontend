@@ -21,13 +21,13 @@ export class AppComponent {
   
 
   async ngOnInit() {
-    this.topAlbums = await lastValueFrom(this.merlin.getTopAlbums('ndeast'))
+    await this.getTopAlbumData(this.currentUser);
     this.isLoaded = true;
   }
 
   async getTopAlbumData(user: string) {
     this.isLoaded = false;
-    this.topAlbums = await lastValueFrom(this.merlin.getTopAlbums(user))
+    this.topAlbums = await lastValueFrom(this.merlin.getTopAlbums(user));
     this.currentUser = user;
     this.isLoaded = true;
   }
