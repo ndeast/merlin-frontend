@@ -1,3 +1,16 @@
+<!-- nav bar element -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand">{{ currentUser }}'s top albums from last week</a>
+     <div class="dropdown d-flex">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">Select User</button>
+      <ul class="dropdown-menu">
+        <li><button class="dropdown-item" *ngFor="let user of usernames" (click)="getTopAlbumData(user)">{{ user }}</button></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- content -->
 <div class="container" *ngIf="isLoaded">
   <div class="row">
     <div class="flex-column album-wrapper">
