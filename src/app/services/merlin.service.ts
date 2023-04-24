@@ -3,17 +3,16 @@ import { Injectable } from '@angular/core';
 import { Album } from '../interfaces/album.interface';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MerlinService {
+  constructor(private http: HttpClient) {}
 
-  constructor(private http: HttpClient) { }
-
-  merlinUrl: string = 'http://localhost:3000/'
+  merlinUrl: string = 'http://150.136.172.164:3000/';
   header = {
-    headers: new HttpHeaders().set('Authorization', "nik")
-  }
-  
+    headers: new HttpHeaders().set('Authorization', 'nik'),
+  };
+
   getTopAlbums(user: string) {
     let url = this.merlinUrl + 'top-albums/' + user;
     return this.http.get<Album[]>(url, this.header);
