@@ -11,12 +11,9 @@ export class MerlinService {
 
   merlinUrl: string = 'http://localhost:3000/'
   header = {
-    headers: new HttpHeaders()
-    .set('Authorization', "nik")
+    headers: new HttpHeaders().set('Authorization', "nik")
   }
   
-
-
   getTopAlbums(user: string) {
     let url = this.merlinUrl + 'top-albums/' + user;
     console.log(this.header)

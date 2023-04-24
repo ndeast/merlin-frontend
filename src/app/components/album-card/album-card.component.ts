@@ -12,6 +12,5 @@ export class AlbumCardComponent {
   constructor() {}
   
   ngOnInit() {
-    console.log(this.album)
   }
 }

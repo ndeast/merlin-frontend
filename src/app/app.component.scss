@@ -2,5 +2,14 @@
   flex-direction: column;
   flex-wrap: wrap;
   display: contents;
-  margin: auto;
+
+}
+.container {
+  max-width: 1000px;
+}
+.album-card-box {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 9px;
+  margin-top: 9px;
 }
