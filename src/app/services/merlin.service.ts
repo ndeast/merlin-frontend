@@ -16,7 +16,6 @@ export class MerlinService {
   
   getTopAlbums(user: string) {
     let url = this.merlinUrl + 'top-albums/' + user;
-    console.log(this.header)
     return this.http.get<Album[]>(url, this.header);
   }
 }
